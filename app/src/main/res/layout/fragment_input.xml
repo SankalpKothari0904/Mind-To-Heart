@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".InputFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.mindtoheart.model.QuestionViewModel" />
+        <variable
+            name="inputFragment"
+            type="com.example.mindtoheart.InputFragment" />
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding='16dp'
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/intro"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/work_question"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/work_options"
+                android:orientation="vertical">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/option_work"
+                    android:text="@string/working"
+                    android:checked="@{viewModel.workOrAcads.equals(@string/working)}"
+                    android:onClick="@{() -> viewModel.setWorkOrAcads(@string/working)}"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/option_student"
+                    android:text="@string/student"
+                    android:checked="@{viewModel.workOrAcads.equals(@string/student)}"
+                    android:onClick="@{() -> viewModel.setWorkOrAcads(@string/student)}"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/relation_question"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relation_options"
+                android:orientation="vertical">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/option_committed"
+                    android:text="@string/committed"
+                    android:checked="@{viewModel.relationshipStatus.equals(@string/committed)}"
+                    android:onClick="@{() -> viewModel.setRelationship(@string/committed)}"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/option_single"
+                    android:text="@string/single"
+                    android:checked="@{viewModel.relationshipStatus.equals(@string/single)}"
+                    android:onClick="@{() -> viewModel.setRelationship(@string/single)}"/>
+
+            </RadioGroup>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/start_quiz"
+                android:layout_marginTop="20dp"
+                android:onClick="@{() -> inputFragment.goToNextScreen()}"/>
+
+        </LinearLayout>
+    </ScrollView>
+</layout>

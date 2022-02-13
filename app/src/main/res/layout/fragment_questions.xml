@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".QuestionsFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.mindtoheart.model.QuestionViewModel" />
+        <variable
+            name="questionFragment"
+            type="com.example.mindtoheart.QuestionsFragment" />
+        <variable
+            name="option1Score"
+            type="int" />
+        <variable
+            name="option2Score"
+            type="int" />
+        <variable
+            name="option3Score"
+            type="int" />
+        <variable
+            name="option4Score"
+            type="int" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:id="@+id/question_image"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/question"
+                Image="@{viewModel.image}"
+                android:importantForAccessibility="no"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:id="@+id/question"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/question_image"
+                app:layout_constraintBottom_toTopOf="@+id/options"
+                Text="@{viewModel.questionText}"/>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/options"
+                app:layout_constraintTop_toBottomOf="@+id/question"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp">
+
+                <RadioButton
+                    android:id="@+id/option1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    RadioButton="@{viewModel.option1}"
+                    android:checked="@{viewModel.currentQuestionScore.equals(0)}"
+                    android:onClick="@{() -> viewModel.setCurrentQuestionScore(0)}"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/option2"
+                    android:layout_marginTop="16dp"
+                    RadioButton="@{viewModel.option2}"
+                    android:checked="@{viewModel.currentQuestionScore.equals(1)}"
+                    android:onClick="@{() -> viewModel.setCurrentQuestionScore(1)}"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/option3"
+                    android:layout_marginTop="16dp"
+                    RadioButton="@{viewModel.option3}"
+                    android:checked="@{viewModel.currentQuestionScore.equals(2)}"
+                    android:onClick="@{() -> viewModel.setCurrentQuestionScore(2)}"/>
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/option4"
+                    android:layout_marginTop="16dp"
+                    RadioButton="@{viewModel.option4}"
+                    android:checked="@{viewModel.currentQuestionScore.equals(3)}"
+                    android:onClick="@{() -> viewModel.setCurrentQuestionScore(3)}"/>
+
+            </RadioGroup>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/submit_button"
+                app:layout_constraintTop_toBottomOf="@+id/options"
+                android:text="@string/submit"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:onClick="@{() -> questionFragment.submitQuestion()}"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

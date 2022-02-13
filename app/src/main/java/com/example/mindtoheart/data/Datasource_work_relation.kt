@@ -1,0 +1,228 @@
+package com.example.mindtoheart.data
+
+import com.example.mindtoheart.R
+
+class Datasource_work_relation {
+    fun loadQuestions(): List<questions> {
+        return listOf<questions>(
+            questions(
+                R.string.q1work,
+                option(R.string.option_always),
+                option(R.string.option_often),
+                option(
+                    R.string.option_rare
+                ),
+                option(R.string.option_never),
+                R.drawable.assignments
+            ),
+            questions(
+                R.string.q2work,
+                option(R.string.option_splendid),
+                option(R.string.option_nice),
+                option(
+                    R.string.option_neutral
+                ),
+                option(R.string.option_bad),
+                R.drawable.coworkers
+            ),
+            questions(
+                R.string.q3work,
+                option(R.string.option_never),
+                option(R.string.option_rare),
+                option(
+                    R.string.option_often
+                ),
+                option(R.string.option_always),
+                R.drawable.sleepcycle
+            ),
+            questions(
+                R.string.q4work,
+                option(R.string.option_strongly_agree),
+                option(R.string.option_agree),
+                option(
+                    R.string.option_neutral
+                ),
+                option(R.string.option_disagree),
+                R.drawable.pay
+            ),
+            questions(
+                R.string.q5work,
+                option(R.string.option_never),
+                option(R.string.option_rare),
+                option(
+                    R.string.option_often
+                ),
+                option(R.string.option_always),
+                R.drawable.overworked
+            ),
+            questions(
+                R.string.q6committed,
+                option(R.string.option_never),
+                option(R.string.option_rare),
+                option(
+                    R.string.option_often
+                ),
+                option(R.string.option_always),
+                R.drawable.unloved
+            ),
+            questions(
+                R.string.q7committed,
+                option(R.string.option_always),
+                option(R.string.option_often),
+                option(
+                    R.string.option_rare
+                ),
+                option(R.string.option_never),
+                R.drawable.time
+            ),
+            questions(
+                R.string.q8committed,
+                option(R.string.option_always),
+                option(R.string.option_often),
+                option(
+                    R.string.option_rare
+                ),
+                option(R.string.option_never),
+                R.drawable.listen
+            ),
+            questions(
+                R.string.q9committed,
+                option(R.string.option_always),
+                option(R.string.option_often),
+                option(
+                    R.string.option_rare
+                ),
+                option(R.string.option_never),
+                R.drawable.relationshipproblems
+            ),
+            questions(
+                R.string.q10committed,
+                option(R.string.option_strongly_agree),
+                option(R.string.option_agree),
+                option(
+                    R.string.option_neutral
+                ),
+                option(R.string.option_disagree),
+                R.drawable.happyrelation
+            ),
+            questions(
+                R.string.q11, option(R.string.option_never), option(R.string.option_rare), option(
+                    R.string.option_often
+                ), option(R.string.option_always),
+                R.drawable.parentpressure
+            ),
+            questions(
+                R.string.q12, option(R.string.option_never), option(R.string.option_rare), option(
+                    R.string.option_often
+                ), option(R.string.option_always),
+                R.drawable.peerpressure
+            ),
+            questions(
+                R.string.q13,
+                option(R.string.option_strongly_agree),
+                option(R.string.option_agree),
+                option(
+                    R.string.option_neutral
+                ),
+                option(R.string.option_disagree),
+                R.drawable.satisfiedfriends
+            ),
+            questions(
+                R.string.q14,
+                option(R.string.option_strongly_agree),
+                option(R.string.option_agree),
+                option(
+                    R.string.option_neutral
+                ),
+                option(R.string.option_disagree),
+                R.drawable.support
+            ),
+            questions(
+                R.string.q15,
+                option(R.string.option_strongly_agree),
+                option(R.string.option_agree),
+                option(
+                    R.string.option_neutral
+                ),
+                option(R.string.option_disagree),
+                R.drawable.parentsupport
+            ),
+            questions(
+                R.string.q16, option(R.string.option_never), option(R.string.option_rare), option(
+                    R.string.option_often
+                ), option(R.string.option_always),
+                R.drawable.timespent
+            ),
+            questions(
+                R.string.q17,
+                option(R.string.option_disagree),
+                option(R.string.option_neutral),
+                option(
+                    R.string.option_agree
+                ),
+                option(R.string.option_strongly_agree),
+                R.drawable.socialskills
+            ),
+            questions(
+                R.string.q18, option(R.string.option_never), option(R.string.option_rare), option(
+                    R.string.option_often
+                ), option(R.string.option_always),
+                R.drawable.likes
+            ),
+            questions(
+                R.string.q19,
+                option(R.string.option_strongly_agree),
+                option(R.string.option_agree),
+                option(
+                    R.string.option_neutral
+                ),
+                option(R.string.option_disagree),
+                R.drawable.wiseinternet
+            ),
+            questions(
+                R.string.q20, option(R.string.option_never), option(R.string.option_rare), option(
+                    R.string.option_often
+                ), option(R.string.option_always),
+                R.drawable.gaming
+            ),
+            questions(
+                R.string.q21, option(R.string.option_always), option(R.string.option_often), option(
+                    R.string.option_rare
+                ), option(R.string.option_never),
+                R.drawable.bodyimage
+            ),
+            questions(
+                R.string.q22, option(R.string.option_never), option(R.string.option_rare), option(
+                    R.string.option_often
+                ), option(R.string.option_always),
+                R.drawable.selfworth
+            ),
+            questions(
+                R.string.q23,
+                option(R.string.option_disagree),
+                option(R.string.option_neutral),
+                option(
+                    R.string.option_agree
+                ),
+                option(R.string.option_strongly_agree),
+                R.drawable.opinions
+            ),
+            questions(
+                R.string.q24,
+                option(R.string.option_strongly_agree),
+                option(R.string.option_agree),
+                option(
+                    R.string.option_neutral
+                ),
+                option(R.string.option_disagree),
+                R.drawable.qualities
+            ),
+            questions(
+                R.string.q25, option(R.string.option_always), option(R.string.option_often), option(
+                    R.string.option_rare
+                ), option(R.string.option_never),
+                R.drawable.relaxed
+            ),
+        )
+    }
+}
