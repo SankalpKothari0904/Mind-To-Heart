@@ -1,7 +1,7 @@
 # Mind-To-Heart
 This app helps users to keep tabs on their mental well being.
 This app has been created using Android Studio as part of the Byte Synergy Hackathon by
-Sankalp Kothari and Siddharth Kothari (DevFolio usernamnes: Sankalp04 and siddharth9403 respectively)
+Sankalp Kothari and Siddharth Kothari (DevFolio usernamnes: Sankalp04 and siddharth9403 respectively) under tracks Open Innovity and Healthcare.
 Our app contains four simple fragments, Start, Input, Questions and Feedback.
 Start Fragment displays some basic information about the app.
 Input Fragment asks the user two questions: whether they are students/working professionals and whether they are single/in a relationship.
